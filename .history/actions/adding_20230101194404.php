@@ -3,13 +3,14 @@
 //including needed classes
 
 include_once("../classes/newproduct.php");
-include_once("../classes/types/dvd.php");
-include_once("../classes/types/furniture.php");
-include_once("../classes/types/book.php");
+include_once("../classes/dvd.php");
+include_once("../classes/furniture.php");
+include_once("../classes/book.php");
 
 $product=new NewProduct();
 
 $product->connection();
+
 
 $product->setSKU($_POST['sku']);
 

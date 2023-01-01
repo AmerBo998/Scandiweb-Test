@@ -26,8 +26,21 @@ include_once("classes/getdata.php");
 <?php 
 
 $product=new GetData();
-$product->showData();
+$productData = $product->showData();
 
+
+foreach ($pData as $item) { ?>
+
+<div class='product'>
+    <input type='checkbox' class='delete-checkbox' name='toDelete[]' value='<?php echo $item['SKU'].""; ?>'>
+        <div class='product_info'><?php   echo $item['SKU']; ?><br><?php  echo $item['name']; ?>
+            <br><?php   echo $item['price']; ?>
+                <br><?php   echo $item['attribute']; ?>
+        </div>
+</div>
+
+    <?php 
+}
 ?>
 
 <hr>
